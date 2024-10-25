@@ -1,10 +1,9 @@
 import Navigation from "./components/navigation";
-
-export default function Tomato(){
+export default function NotFound(){
     return (
-        <div>
-        <h1>Hello NextJs!</h1>
+        <>
+        <h1>Not Found</h1>
         <Navigation></Navigation>
-        </div>
+        </>
     );
 }
