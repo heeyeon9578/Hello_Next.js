@@ -1,3 +1,3 @@
-export default function AboutUs(){
+export default function Sales(){
     return <h1>Sales</h1>;
 }
