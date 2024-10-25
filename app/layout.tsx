@@ -1,5 +1,5 @@
 import Navigation from '../app/components/navigation'
-
+import "../styles/global.css"
 
 
 export default function Layout({
@@ -10,8 +10,9 @@ export default function Layout({
   return (
     <html lang="en">
       <body>
-      {children}
       <Navigation></Navigation>
+      {children}
+      
       </body>
     </html>
   );

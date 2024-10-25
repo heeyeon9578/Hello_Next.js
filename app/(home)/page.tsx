@@ -1,9 +1,10 @@
 
 import Navigation from "../components/navigation";
-
+import styles from './home.module.css';
 import Link from "next/link"
 import { resolve } from "path";
 import React ,{useEffect, useState,} from 'react';
+import Movie from "../components/movie";
 
 export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 async function getMovies(){
@@ -16,12 +17,17 @@ async function getMovies(){
 export default async function HomePage() {
     const movies = await getMovies();
     return (
-        <div>
-          {movies.map((movie)=>
-          <li key={movie.key}> 
-            <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
-          </li>)}
-          
+        <div className={styles.container}>
+            {movies.map((movie)=>
+               <Movie 
+               key={movie.id} 
+               id={movie.id} 
+               poster_path={movie.poster_path}
+               title={movie.title}
+               >
+                
+               </Movie>
+            )};
         </div>
     );
 }
