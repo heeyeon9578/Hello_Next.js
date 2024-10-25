@@ -1,4 +1,4 @@
-import { API_URL } from "../../app/(home)/page";
+import {API_URL} from "../constants";
 import potato from "./movie-info.module.css";
 export async function getMovie(id: string) {
   console.log(`Fetching movies: ${Date.now()}`);

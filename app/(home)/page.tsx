@@ -5,8 +5,8 @@ import Link from "next/link"
 import { resolve } from "path";
 import React ,{useEffect, useState,} from 'react';
 import Movie from "../components/movie";
+import {API_URL} from "../constants";
 
-export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 async function getMovies(){
     await new Promise((resolve) => setTimeout(resolve, 1000))
     console.log("i am fetching....")
